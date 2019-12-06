@@ -18,7 +18,7 @@ class Pokemonsay < Formula
     system "cp", "pokemonsay.sh", "pokesay"
     system "cp", "pokemonthink.sh", "pokethink"
 
-    inreplace "pokemonsay", /^pokemon_path=.*$/, "pokemon_path=#{prefix}/cows"
+    inreplace "pokesay", /^pokemon_path=.*$/, "pokemon_path=#{prefix}/cows"
     # inreplace "pokemonsay", /\bshuf\b/, "gshuf" if not OS.linux?
 
     bin.install "pokesay"
