@@ -1,9 +1,9 @@
 class Pokemonsay < Formula
   desc '"pokemonsay" is like "cowsay" but for pokémon.'
   homepage "https://github.com/XiaoXiaoSN/pokemonsay"
-  url "https://github.com/XiaoXiaoSN/pokemonsay/tarball/v1.0.0"
-  sha256 "96ebf51dadb15b95dd9975ca70664cf02d9c772c9deaac82190dd533bce1de9d"
-  version "v1.0.0"
+  url "https://github.com/XiaoXiaoSN/pokemonsay/tarball/v1.0.1"
+  sha256 ""
+  version "v1.0.1"
 
   depends_on "cowsay" => :recommended
   depends_on "coreutils" => [:recommended, "with-default-names"] if not OS.linux?
