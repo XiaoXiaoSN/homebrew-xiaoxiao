@@ -1,7 +1,7 @@
-class Pokemonsay < Formula
+class PokeSay < Formula
   desc '"pokemonsay" is like "cowsay" but for pokémon.'
-  homepage "https://github.com/possatti/pokemonsay"
-  url "https://github.com/possatti/pokemonsay/tarball/v1.0.0"
+  homepage "https://github.com/XiaoXiaoSN/pokemonsay"
+  url "https://github.com/XiaoXiaoSN/pokemonsay/tarball/v1.0.0"
   sha256 "1494bac29d009b8b2c2a0d75d715fe5a8e77a79f5dc62d9b5cd5ba589af0f5e5"
   version "v1.0.0"
 
@@ -15,14 +15,14 @@ class Pokemonsay < Formula
 
   def install
     system "cp", "-r", "./cows", "#{prefix}/cows"
-    system "cp", "pokemonsay.sh", "pokemonsay"
-    system "cp", "pokemonthink.sh", "pokemonthink"
+    system "cp", "pokemonsay.sh", "pokesay"
+    system "cp", "pokemonthink.sh", "pokethink"
 
     inreplace "pokemonsay", /^pokemon_path=.*$/, "pokemon_path=#{prefix}/cows"
     # inreplace "pokemonsay", /\bshuf\b/, "gshuf" if not OS.linux?
 
-    bin.install "pokemonsay"
-    bin.install "pokemonthink"
+    bin.install "pokesay"
+    bin.install "pokethink"
   end
 
   test do
