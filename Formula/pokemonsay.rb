@@ -1,8 +1,8 @@
-class PokeSay < Formula
+class Pokemonsay < Formula
   desc '"pokemonsay" is like "cowsay" but for pokémon.'
   homepage "https://github.com/XiaoXiaoSN/pokemonsay"
   url "https://github.com/XiaoXiaoSN/pokemonsay/tarball/v1.0.0"
-  sha256 "1494bac29d009b8b2c2a0d75d715fe5a8e77a79f5dc62d9b5cd5ba589af0f5e5"
+  sha256 "96ebf51dadb15b95dd9975ca70664cf02d9c772c9deaac82190dd533bce1de9d"
   version "v1.0.0"
 
   depends_on "cowsay" => :recommended
