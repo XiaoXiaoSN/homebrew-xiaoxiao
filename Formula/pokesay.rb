@@ -1,4 +1,4 @@
-class Pokemonsay < Formula
+class Pokesay < Formula
   desc '"pokesay" is like "cowsay" but for pokémon.'
   homepage "https://github.com/XiaoXiaoSN/pokesay"
   url "https://github.com/XiaoXiaoSN/pokesay/tarball/v1.0.1"
