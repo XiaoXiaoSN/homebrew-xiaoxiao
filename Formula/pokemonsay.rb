@@ -1,7 +1,7 @@
 class Pokemonsay < Formula
-  desc '"pokemonsay" is like "cowsay" but for pokémon.'
-  homepage "https://github.com/XiaoXiaoSN/pokemonsay"
-  url "https://github.com/XiaoXiaoSN/pokemonsay/tarball/v1.0.1"
+  desc '"pokesay" is like "cowsay" but for pokémon.'
+  homepage "https://github.com/XiaoXiaoSN/pokesay"
+  url "https://github.com/XiaoXiaoSN/pokesay/tarball/v1.0.1"
   sha256 ""
   version "v1.0.1"
 
