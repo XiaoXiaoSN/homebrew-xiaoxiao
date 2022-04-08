@@ -11,15 +11,9 @@ cask "font-noto-nerd" do
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
   font "Noto Emoji Nerd Font Complete Mono.ttf"
-  font "Noto Emoji Nerd Font Complete.ttf"
-  font "Noto Sans Mono ExtraLight Nerd Font Complete Mono.ttf"
   font "Noto Sans Mono ExtraLight Nerd Font Complete.ttf"
-  font "Noto Sans Mono Light Nerd Font Complete Mono.ttf"
   font "Noto Sans Mono Light Nerd Font Complete.ttf"
-  font "Noto Sans Mono Medium Nerd Font Complete Mono.ttf"
   font "Noto Sans Mono Medium Nerd Font Complete.ttf"
-  font "Noto Sans Mono Regular Nerd Font Complete Mono.ttf"
   font "Noto Sans Mono Regular Nerd Font Complete.ttf"
-  font "Noto Sans Mono SemiBold Nerd Font Complete Mono.ttf"
   font "Noto Sans Mono SemiBold Nerd Font Complete.ttf"
 end
