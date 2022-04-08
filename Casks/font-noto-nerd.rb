@@ -1,7 +1,7 @@
 # Copy from
 # https://github.com/Homebrew/homebrew-cask-fonts/blob/master/Casks/font-noto-nerd-font.rb
 
-cask "font-noto-nerd-font" do
+cask "font-noto-nerd" do
   version "2.1.0"
   sha256 "1f90f44ff557dd0d8f2ac50822c1ee53aa898a907e6d308e96913a479c65beca"
 
