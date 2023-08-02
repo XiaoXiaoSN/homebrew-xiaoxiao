@@ -10,4 +10,6 @@ brew tap xiaoxiaosn/xiaoxiao
 ```bash
 # Install something
 brew install font-noto-nerd # or xiaoxiaosn/xiaoxiao/font-noto-nerd
+
+brew install xiaoxiaosn/xiaoxiao/pokesay
 ```
