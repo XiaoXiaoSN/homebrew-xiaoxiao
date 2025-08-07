@@ -1,20 +1,20 @@
-# Copy from https://github.com/Homebrew/homebrew-cask-fonts/blob/master/Casks/font-noto-nerd-font.rb
-# we don't need to install all fonts, so we just copy the font we need
+# This Cask is a partial copy from the official Homebrew repository:
+# https://github.com/Homebrew/homebrew-cask/blob/main/Casks/font/font-n/font-noto-nerd-font.rb
+# It includes only the Monospaced variant of the Noto Nerd Font to reduce download size.
 #
-# NOTE:
-# `Noto` = Noto is a font family that Commissioned by Google under the Apache License 2.0
-# `Noto Sans` = Noto Sans is a sans-serif (無襯線) font family
-# `Mono` = Monospaced Fonts (All same width - good for developers)
-# `Propo` = Proportional Fonts (GUI elements or edit a presentation etc)
-# `Nerd` = Nerd Fonts patches developer targeted fonts with a high number of glyphs (icons)
+# Terminology:
+# - Noto: A font family commissioned by Google under the Apache License 2.0.
+# - Noto Sans: The sans-serif (無襯線) typeface of the Noto family.
+# - Mono: Refers to monospaced fonts, where every character has the same width. Ideal for coding.
+# - Propo: Refers to proportional fonts, where character widths vary. Better for UI and documents.
+# - Nerd Font: A font patched with a large number of developer-oriented icons and glyphs.
 
 cask "font-noto-nerd" do
-  version "3.0.2"
-  sha256 "075927e1725c93efd9ba230499d98291559f45356b0b56b1e545ec3eda946a6f"
+  version "3.4.0"
+  sha256 "eb9038a1b788a3a3ee34324f5b2277954a1c301d241b0cc7b62e5ff890b544b9"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Noto.zip"
-  name "Noto Nerd Font families (Noto)"
-  desc "Developer targeted fonts with a high number of glyphs"
+  name "Noto Nerd Font (Monospaced)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
   livecheck do
