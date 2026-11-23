@@ -1,0 +1,53 @@
+name: Update AltTab unlocked Cask
+
+on:
+  schedule:
+    # First day of every month at 09:15 Taiwan time.
+    - cron: "15 9 1 * *"
+      timezone: "Asia/Taipei"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-alt-tab-cask
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test updater
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Check latest release and verify archive
+        run: python3 scripts/update_alt_tab_cask.py
+
+      - name: Validate Cask syntax
+        run: ruby -c Casks/alt-tab-macos-free.rb
+
+      - name: Check patch formatting
+        run: git diff --check
+
+      - name: Open update PR when the pinned version changes
+        uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: Casks/alt-tab-macos-free.rb
+          branch: automation/update-alt-tab-macos-free
+          delete-branch: true
+          commit-message: "chore(cask): update AltTab unlocked release"
+          title: "chore(cask): update AltTab unlocked release"
+          body: |
+            Automated monthly update from the latest
+            [AltTab unlocked GitHub release](https://github.com/filipef101/alt-tab-macos-free/releases/latest).
+
+            The updater validates the release tag, download URL, archive size,
+            and SHA-256 against the GitHub release asset digest before changing
+            the version-pinned Cask.
+
+            Please review and merge manually. No automatic merge is enabled.
